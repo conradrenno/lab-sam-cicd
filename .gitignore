@@ -1,0 +1,14 @@
+# SAM build output
+.aws-sam/
+
+# Maven
+target/
+
+# IntelliJ
+.idea/
+*.iml
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
