@@ -4,6 +4,7 @@ version = 0.1
 
 [default.global.parameters]
 stack_name = "lab-sam-cicd"
+region = "us-east-1"
 
 [default.build.parameters]
 cached = true
@@ -13,16 +14,12 @@ parallel = true
 lint = true
 
 [default.deploy.parameters]
-stack_name = "lab-sam-cicd"
-region = "us-east-1"
 resolve_s3 = true
 s3_prefix = "lab-sam-cicd"
 capabilities = "CAPABILITY_IAM"
-confirm_changeset = false
+confirm_changeset = true
+fail_on_empty_changeset = false
 tags = "Project=\"lab-sam-cicd\" ManagedBy=\"sam\""
-
-[default.package.parameters]
-resolve_s3 = true
 
 [default.sync.parameters]
 watch = true
